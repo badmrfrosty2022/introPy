@@ -40,7 +40,65 @@ def brincar_de_plim(fim):
         else:
             print('{:0>3}'.format(numero))
 
-# Press the green button in the gutter to run the script.
+def exibir_dia_da_semana_if(numero):
+    print("Execução com IF")
+    if numero == 1:
+        print('O dia é segunda')
+    elif numero == 2:
+        print('O dia é terça')
+    elif numero == 3:
+        print('O dia é quarta')
+    elif numero == 4:
+        print('O dia é quinta')
+    elif numero == 5:
+        print('O dia é sexta')
+    elif numero == 6:
+        print('O dia é sabado')
+    elif numero == 7:
+        print('O dia é domingo')
+    else:
+        print('Numero de dia inválido. Digite de 1 a 7')
+
+'''
+def exibir_dia_da_semana_match(numero):
+    print("Execução com MATCH")
+    match numero:
+        case 1:
+            print('O dia é segunda')
+            exit()
+        case 2:
+            print('O dia é terça')
+            exit()
+        case 3:
+            print('O dia é quarta')
+            exit()
+        case 4:
+            print('O dia é quinta')
+            exit()
+        case 5:
+            print('O dia é sexta')
+            exit()
+        case 6:
+            print('O dia é sabado')
+            exit()
+        case 7:
+            print('O dia é domingo')
+            exit()
+        case _:
+            print('Numero de dia inválido. Digite de 1 a 7')
+
+'''
+def brincar_de_para_ou_continua():
+    resposta = 'C' # C aqui significa que continua
+
+    #while resposta == 'C' or  resposta == 'c':
+    while resposta.upper() == 'C':
+        resposta = input('Digite C para continuar ou qualquer outra caracter para parar')
+
+    print('Você decidiu parar com a brincadeira')
+
+
+# Estrutura de identificação / execução do script
 if __name__ == '__main__':
     print_hi('Eduardo')
 
@@ -64,6 +122,15 @@ if __name__ == '__main__':
 
     #brincar de plim
     brincar_de_plim(100)
+
+    # exemplo de dia da semana com if - elif - else
+    exibir_dia_da_semana_if(2)
+
+    # exemplo de dia da semana com match - case
+    #exibir_dia_da_semana_match(7)
+
+    # exemplo com while - para ou continua
+    brincar_de_para_ou_continua()
 
 
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
